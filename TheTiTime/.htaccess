@@ -1,0 +1,30 @@
+# BEGIN WP Hide & Security Enhancer
+<IfModule mod_rewrite.c> 
+RewriteEngine On 
+RewriteBase / 
+#WriteCheckString:1542796481_65776
+RewriteRule .* - [E=HTTP_MOD_REWRITE:On]
+
+RewriteRule ^login.php(.*) /wp-login.php$1 [L,QSA]
+
+RewriteCond %{REQUEST_URI} /admin$
+RewriteRule ^(.*)$ /admin/ [R=301,L]
+RewriteRule ^admin(.*) /wp-admin$1 [L,QSA]
+</IfModule> 
+
+# END WP Hide & Security Enhancer
+# This file was updated by Duplicator on 2018-11-03 12:31:05. See .htaccess.orig for the original .htaccess file.
+# Please note that other plugins and resources write to this file. If the time-stamp above is different
+# than the current time-stamp on the file system then another resource has updated this file.
+# Duplicator only writes to this file once during the install process while running the installer.php file.
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress

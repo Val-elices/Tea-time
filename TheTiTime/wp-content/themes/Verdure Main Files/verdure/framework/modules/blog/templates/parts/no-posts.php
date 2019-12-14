@@ -1,0 +1,1 @@
+<p class="mkdf-blog-no-posts"><?php esc_html_e('Excusez-nous, aucun poste ne correspond à vos critères de recherche.', 'verdure'); ?></p>
